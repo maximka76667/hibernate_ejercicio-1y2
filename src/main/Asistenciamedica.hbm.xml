@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 4 oct. 2022 10:39:04 by Hibernate Tools 6.0.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="seguros" name="main.Asistenciamedica" optimistic-lock="none" table="asistenciamedica">
+        <id name="idAsistenciaMedica" type="java.lang.Integer">
+            <column name="IdAsistenciaMedica"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="main.Seguro" fetch="select" name="seguro">
+            <column name="IdSeguro"/>
+        </many-to-one>
+        <property name="breveDescripcion" type="string">
+            <column length="255" name="breveDescripcion"/>
+        </property>
+        <property name="lugar" type="string">
+            <column length="255" name="lugar"/>
+        </property>
+        <property name="explicacion" type="string">
+            <column length="65535" name="explicacion"/>
+        </property>
+        <property name="tipoAsistencia" type="string">
+            <column length="50" name="TipoAsistencia"/>
+        </property>
+        <property name="fecha" type="date">
+            <column length="10" name="fecha"/>
+        </property>
+        <property name="hora" type="time">
+            <column length="8" name="hora"/>
+        </property>
+        <property name="importe" type="big_decimal">
+            <column name="importe" precision="10" scale="2"/>
+        </property>
+        <property name="idx" type="java.lang.Integer">
+            <column name="idx"/>
+        </property>
+    </class>
+</hibernate-mapping>

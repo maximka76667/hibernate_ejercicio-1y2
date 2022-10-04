@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 4 oct. 2022 10:39:04 by Hibernate Tools 6.0.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="seguros" name="main.Seguro" optimistic-lock="none" table="seguro">
+        <id name="idSeguro" type="java.lang.Integer">
+            <column name="idSeguro"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nif" type="string">
+            <column length="255" name="nif"/>
+        </property>
+        <property name="nombre" type="string">
+            <column length="255" name="nombre"/>
+        </property>
+        <property name="ape1" type="string">
+            <column length="255" name="ape1"/>
+        </property>
+        <property name="ape2" type="string">
+            <column length="255" name="ape2"/>
+        </property>
+        <property name="edad" type="java.lang.Integer">
+            <column name="edad"/>
+        </property>
+        <property name="sexo" type="java.lang.Integer">
+            <column name="sexo"/>
+        </property>
+        <property name="casado" type="java.lang.Boolean">
+            <column name="casado"/>
+        </property>
+        <property name="numHijos" type="java.lang.Integer">
+            <column name="numHijos"/>
+        </property>
+        <property name="embarazada" type="java.lang.Boolean">
+            <column name="embarazada"/>
+        </property>
+        <property name="oftalmologia" type="java.lang.Boolean">
+            <column name="oftalmologia"/>
+        </property>
+        <property name="dental" type="java.lang.Boolean">
+            <column name="dental"/>
+        </property>
+        <property name="fecundacionInVitro" type="java.lang.Boolean">
+            <column name="fecundacionInVitro"/>
+        </property>
+        <property name="corazon" type="java.lang.Boolean">
+            <column name="corazon"/>
+        </property>
+        <property name="estomacal" type="java.lang.Boolean">
+            <column name="estomacal"/>
+        </property>
+        <property name="rinyones" type="java.lang.Boolean">
+            <column name="rinyones"/>
+        </property>
+        <property name="alergia" type="java.lang.Boolean">
+            <column name="alergia"/>
+        </property>
+        <property name="nombreAlergia" type="string">
+            <column length="255" name="nombreAlergia"/>
+        </property>
+        <property name="fechaCreacion" type="timestamp">
+            <column length="19" name="fechaCreacion"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="asistenciamedicas" table="asistenciamedica">
+            <key>
+                <column name="IdSeguro"/>
+            </key>
+            <one-to-many class="main.Asistenciamedica"/>
+        </set>
+    </class>
+</hibernate-mapping>
