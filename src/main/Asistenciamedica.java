@@ -24,6 +24,13 @@ public class Asistenciamedica implements java.io.Serializable {
 	public Asistenciamedica() {
 	}
 
+	public Asistenciamedica(Integer idAsistenciaMedica, Seguro seguro, String breveDescripcion, String lugar) {
+		this.idAsistenciaMedica = idAsistenciaMedica;
+		this.seguro = seguro;
+		this.breveDescripcion = breveDescripcion;
+		this.lugar = lugar;
+	}
+
 	public Asistenciamedica(Seguro seguro, String breveDescripcion, String lugar, String explicacion,
 			String tipoAsistencia, Date fecha, Time hora, BigDecimal importe, Integer idx) {
 		this.seguro = seguro;

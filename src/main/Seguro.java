@@ -39,6 +39,20 @@ public class Seguro implements java.io.Serializable {
 		this.nombre = nombre;
 	}
 
+	public Seguro(Integer idSeguro, String nif, String nombre, String ape1, String ape2, Integer edad, Integer numHijos,
+			Timestamp fechaCreacion) {
+		super();
+		this.idSeguro = idSeguro;
+		this.nif = nif;
+		this.nombre = nombre;
+		this.ape1 = ape1;
+		this.ape2 = ape2;
+		this.edad = edad;
+		this.numHijos = numHijos;
+		this.fechaCreacion = fechaCreacion;
+
+	}
+
 	public Seguro(String nif, String nombre, String ape1, String ape2, Integer edad, Integer sexo, Boolean casado,
 			Integer numHijos, Boolean embarazada, Boolean oftalmologia, Boolean dental, Boolean fecundacionInVitro,
 			Boolean corazon, Boolean estomacal, Boolean rinyones, Boolean alergia, String nombreAlergia,
