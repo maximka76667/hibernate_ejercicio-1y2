@@ -15,7 +15,6 @@ public class Main {
 		java.util.logging.Logger.getLogger("org.hibernate").setLevel(java.util.logging.Level.OFF);
 
 		Configuration config = new Configuration();
-
 		config.configure("./hibernate.cfg.xml");
 
 		SessionFactory factory = config.buildSessionFactory();
